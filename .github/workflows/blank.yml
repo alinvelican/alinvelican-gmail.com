@@ -24,8 +24,8 @@ jobs:
           tf_actions_subcommand: 'fmt'
           tf_actions_working_dir: '.'
           tf_actions_comment: true
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GOOGLE_CLOUD_KEYFILE_JSON: ${{ secrets.GOOGLE_CLOUD_KEYFILE_JSON }}
       - name: 'Terraform Init'
         uses: hashicorp/terraform-github-actions@master
         with:
@@ -33,8 +33,8 @@ jobs:
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: '.'
           tf_actions_comment: true
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GOOGLE_CLOUD_KEYFILE_JSON: ${{ secrets.GOOGLE_CLOUD_KEYFILE_JSON }}
       - name: 'Terraform Validate'
         uses: hashicorp/terraform-github-actions@master
         with:
@@ -42,8 +42,8 @@ jobs:
           tf_actions_subcommand: 'validate'
           tf_actions_working_dir: '.'
           tf_actions_comment: true
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GOOGLE_CLOUD_KEYFILE_JSON: ${{ secrets.GOOGLE_CLOUD_KEYFILE_JSON }}
       - name: 'Terraform Plan'
         id: 'terraform_plan'
         uses: hashicorp/terraform-github-actions@master
@@ -52,5 +52,5 @@ jobs:
           tf_actions_subcommand: 'plan'
           tf_actions_working_dir: '.'
           tf_actions_comment: true
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GOOGLE_CLOUD_KEYFILE_JSON: ${{ secrets.GOOGLE_CLOUD_KEYFILE_JSON }}
