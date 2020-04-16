@@ -1,7 +1,7 @@
 resource "google_cloud_run_service" "default" {
   name     = "cloudrun-srv2"
   location = "us-central1"
-  project  = "temporal-ground-251311"
+  project  = "wide-journey-273812"
 
   template {
     spec {
